@@ -21,8 +21,3 @@ output "path_for_private_ssh_key" {
 output "vm_username" {
   value = var.vm_user
 }
-
-output "test_vm_password" {
-  value     = random_password.test_vm_password.result
-  sensitive = true
-}

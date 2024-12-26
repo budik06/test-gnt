@@ -10,15 +10,6 @@ resource "local_file" "private_key" {
   file_permission = "0600"
 }
 
-resource "random_password" "test_vm_password" {
-  length  = 12
-  upper   = true
-  lower   = true
-  numeric = true
-  special = false
-  #   override_special = "!@%&*()-_=+[]{}<>:?"
-}
-
 data "yandex_compute_image" "ubuntu_image" {
   family = "ubuntu-2204-lts"
 }
